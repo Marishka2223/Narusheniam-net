@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нарушениям.Нет - Регистрация</title>
+    <link rel="stylesheet" href="../styles/stiles_for_Main.css">
+    <script src="../javaScript/functions.js" defer></script>
+</head>
+<body>
+    <header class="header" style="display: flex; align-items: center;  justify-content: center">
+    </header>
+    <main style="display: flex; align-items: center;  justify-content: center; flex-direction: column; text-decoration: none;">
+        <h1 class="noViolationsM2">Нарушениям.Нет</h1>
+        <h1 class="noViolationsS">Регистрация</h1>
+         <form action="../remote/remote.php" method="post"  id="form">
+            <input type="hidden" value="registration.html" name="page" />
+            <div class="contBlur"><input type="text" name="user" id="user" placeholder="Логин"  required><div class="blurS"></div></div>
+            <br>
+            <div class="contBlur"><input type="text" name="name" id="name" placeholder="Фамилия" required><div class="blurS" ></div></div>
+            <br>
+            <div class="contBlur"><input type="text" name="lastname" id="lastname" placeholder="Имя" required><div class="blurS"></div></div>
+            <br>
+            <div class="contBlur"><input type="text" name="fathername" id="fathername" placeholder="Отчество" required><div class="blurS"></div></div>
+            <br>
+            <div class="contBlur"><input type="text" name="number" id="number" placeholder="Номер Телефона" required><div class="blurS"></div></div>
+            <br>
+            <div class="contBlur"><input type="email" name="mail" id="mail" placeholder="Почта"  required><div class="blurS"></div></div>
+            <br>
+            <div class="contBlur"><input type="password" name="password" id="password" placeholder="Пароль" required><div class="blurS"></div></div>
+            <br>
+            <div class="contBlur"><input type="password" name="password_d" id="password_d" placeholder="Подтвердите пароль" required><div class="blurS"></div></div>
+            <br>
+            <div class="contBlur"><input type="submit" value="Зарегистрироваться"><div class="blur"></div></div>
+        </form>
+        <section id="links">
+            <a class="reg" href="./authorization.html"><h2 class="text t2">Войти</h2><img class="str" src="../Additional_Files/Images/str.png" alt=""><div class="blur"></div></a>
+        </section>
+        <section id="err">
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>

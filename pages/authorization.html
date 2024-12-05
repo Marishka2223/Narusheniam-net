@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нарушениям.Нет - Авторизация</title>
+    <link rel="stylesheet" href="../styles/stiles_for_Main.css">
+</head>
+<body>
+    <header class="header" >
+    </header>
+    <main style="display: flex; align-items: center;  justify-content: center; flex-direction: column; text-decoration: none;">
+        <h1 class="noViolationsM">Нарушениям.Нет</h1>
+        <h1 class="noViolationsS">Вход</h1>
+        <form action="../remote/remote.php" method="post">
+            <input type="hidden" value="authorization.html" name="page" />
+            <div class="contBlur"><input type="text" name="user" id="user" placeholder="Логин"><div class="blurS"></div></div>
+            <br>
+            <div class="contBlur"><input type="password" name="password" id="password" placeholder="Пароль"><div class="blurS"></div></div>
+            <br>
+            <div class="contBlur"><input type="submit" value="Войти"><div class="blur"></div></div>
+        </form>
+        <section id="links">
+            <a class="reg" href="./registration.html"><h2 class="text t2">Зарегистрироваться</h2><img class="str" src="../Additional_Files/Images/str.png" alt=""><div class="blur"></div></a>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
