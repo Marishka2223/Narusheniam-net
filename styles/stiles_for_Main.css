@@ -1,0 +1,424 @@
+* {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+:root {
+    --massage-back-color: rgb(162, 192, 218);
+    --a-back-color: rgba(202, 230, 255, 0.568);
+    --massage-height: 34px;
+    --massage-backErr-color: rgba(255, 0, 0, 0.712);
+    display: flex; 
+    align-items: center;  
+    justify-content: center; 
+    flex-direction: column; 
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: no;
+    src: url();
+}
+
+main{
+    display: flex; 
+    align-items: center;  
+    justify-content: center; 
+    flex-direction: column; 
+    text-decoration: none;
+}
+
+body {
+    position: relative;
+    width: calc(390px - 50px) !important;
+    overflow: hidden;
+    height: calc(844px - 50px) !important;
+    display: flex;
+    height: calc(100vh - 50px) !important;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: var(--fone);
+    background-repeat: no-repeat;
+    margin: var(--margin-frontier) !important;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+
+    & .settings {
+        border: none !important;
+        background: none !important;
+
+        & img {
+            opacity: 0.9;
+        }
+    }
+}
+
+a,
+input::placeholder,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: rgb(0, 0, 0) !important;
+    text-decoration: none !important;
+}
+
+#massage {
+    width: 50vh !important;
+    height: calc(var(--massage-height) *8) !important;
+}
+
+#links {
+    position: relative;
+
+    & .newMassage,
+    .contactUs,
+    .reg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100% !important;
+        margin: 15px 0px 15px 0px !important;
+
+        & .text {
+            z-index: 2;
+            text-align: center;
+        }
+
+        & .blur {
+            position: absolute;
+            width: 100% !important;
+            height: var(--massage-height) !important;
+            background: var(--a-back-color) !important;
+            filter: blur(1.5px);
+            border-radius: 10px !important;
+        }
+    }
+}
+
+form,
+#err {
+    & .contBlur {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin: var(--margin-frontier-massage2) !important;
+
+        & input {
+            border-radius: 10px !important;
+            padding: 18px 15px 16px 15px !important;
+            width: calc(var(--massage-width) + 100px) !important;
+            height: calc(var(--massage-height) - 15px) !important;
+            z-index: 2;
+            background: none !important;
+            border: none !important;
+            color: rgb(0, 0, 0) !important;
+        }
+
+        & input[value] {
+            height: calc(var(--massage-height)) !important;
+            padding: 5px 15px 5px 15px !important;
+            ;
+        }
+
+        & .inline-b {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            & input[type="file"] {
+                position: absolute;
+                visibility: hidden;
+                opacity: 0;
+            }
+
+            & .file,
+            .file-text {
+                position: relative;
+                z-index: 2;
+            }
+
+            & .file {
+                margin: 5px 0px 5px 0px !important;
+                padding: 0px 10px 0px 10px !important;
+                color: rgb(0, 0, 0);
+                border-radius: 10px;
+                font-size: xx-large !important;
+                font-weight: 1000 !important;
+            }
+
+            & .file-text {
+                margin: 5px 0px 5px 0px !important;
+                padding: 5px 5px 5px 5px !important;
+                color: rgb(0, 0, 0);
+                font-size: large !important;
+                font-weight: 600 !important;
+            }
+        }
+
+        & input::placeholder,
+        input[value] {
+            font-size: large !important;
+            font-weight: 600 !important;
+        }
+
+        & .blur,
+        .blurS,
+        .blurSErr {
+            position: absolute;
+            width: 100% !important;
+            height: 100% !important;
+            filter: blur(1.5px);
+            border-radius: 10px !important;
+            box-shadow: #00000048 -1px 1px 0px 0px;
+        }
+
+        & .blur {
+            background: var(--a-back-color) !important;
+        }
+
+        & .blurS {
+            background: var(--massage-back-color) !important;
+        }
+
+        & .blurSErr {
+            height: calc(100% + 10px) !important;
+            background: var(--massage-backErr-color) !important;
+        }
+
+        & textarea {
+            position: relative;
+            padding: 5px 15px 5px 15px !important;
+            background: none !important;
+            border: none !important;
+            border-radius: 10px !important;
+            width: 100% !important;
+            height: calc((var(--massage-height) - 15px) * 4) !important;
+            z-index: 2;
+            color: rgb(0, 0, 0);
+            font-size: x-large !important;
+            font-weight: 600 !important;
+        }
+
+        & textarea::placeholder {
+            color: rgb(0, 0, 0);
+            font-size: x-large !important;
+            font-weight: 600 !important;
+        }
+    }
+
+    & .contBlur:has(.inline-b) {
+        width: 30% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+.err {
+    padding: 5px 5px 5px 5px !important;
+    z-index: 2;
+}
+
+.t2 {
+    padding: 2px 5px 2px 5px !important;
+    font-size: 21px;
+}
+
+.noViolationsM {
+    position: absolute;
+    text-align: center;
+    top: 140px;
+    left: 65px;
+}
+
+.noViolationsM2 {
+    position: absolute;
+    text-align: center;
+    top: 70px;
+    left: 40px;
+}
+
+.noViolationsS {
+    text-align: center;
+    margin-bottom: 20px !important;
+}
+
+.str {
+    width: 17px;
+    height: 13px;
+}
+
+footer {
+    height: 37px;
+    width: 100px;
+}
+
+#massage , #massage2{
+    position: relative;
+    width: 340px !important;
+    overflow-y: scroll;
+
+    & .contS {
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+        width: 320px !important;
+        height: max-content;
+
+        & .contD {
+            display: flex;
+            justify-content: center;
+            & .Etext {
+                font-size: 20px;
+                font-weight: 500 !important;
+                padding: 0px 5px 1px 5px !important;
+            }
+        }
+
+        & .contBlur {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: var(--margin-frontier-massage2) !important;
+            height: 34px !important;
+
+            & .blur,
+            .blurS,
+            .blurSErr {
+                position: absolute;
+                width: 100% !important;
+                height: 100% !important;
+                filter: blur(1.5px);
+                border-radius: 10px !important;
+                box-shadow: #00000048 -1px 1px 0px 0px;
+            }
+
+            & .blur {
+                background: var(--a-back-color) !important;
+            }
+
+            & .blurS {
+                background: var(--massage-back-color) !important;
+            }
+
+            & .blurSErr {
+                height: calc(100% + 10px) !important;
+                background: var(--massage-backErr-color) !important;
+            }
+
+            & .Etext {
+                font-size: 20px;
+                font-weight: 500 !important;
+                padding: 0px 5px 1px 5px !important;
+            }
+        }
+    }
+}
+#massage2{
+    height: 200px;
+    & .contS, .contS2 {
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+        width: 320px !important;
+        height: max-content;
+
+        & .contD {
+            display: flex;
+            justify-content: center;
+            & .Etext {
+                font-size: 20px;
+                font-weight: 500 !important;
+                padding: 0px 5px 1px 5px !important;
+            }
+        }
+
+        & .contBlur2:hover {
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin: var(--margin-frontier-massage2) !important;
+            & .str2{
+                width: 100% !important;
+                height: 30% !important;
+                display: flex;
+                align-items: center;
+                overflow: hidden;
+            }
+        }
+
+        & .contBlur2 {
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin: var(--margin-frontier-massage2) !important;
+            & .str{
+                width: 100% !important;
+                height: 30% !important;
+                display: flex;
+                align-items: center;
+                overflow: hidden;
+            }
+            & .str2{
+                display: none;
+            }
+            & input {
+                border-radius: 10px !important;
+                padding: 0px 5px 0px 0px !important;
+                height: calc(var(--massage-height) - 15px) !important;
+                z-index: 2;
+                background: none !important;
+                border: none !important;
+                color: rgb(0, 0, 0) !important;
+            }
+    
+            & input[value] {
+                height: calc(var(--massage-height)) !important;
+                padding: 0px 5px 5=0px 5px !important;
+                color: rgb(0, 0, 0);
+                font-size: 16px;
+            }
+
+            & .blur,
+            .blurS,
+            .blurSErr {
+                position: absolute;
+                width: 100% !important;
+                height: 100% !important;
+                filter: blur(1.5px);
+                border-radius: 10px !important;
+                box-shadow: #00000048 -1px 1px 0px 0px;
+            }
+
+            & .blur {
+                background: var(--a-back-color) !important;
+            }
+
+            & .blurS {
+                background: var(--massage-back-color) !important;
+            }
+
+            & .blurSErr {
+                height: calc(100% + 10px) !important;
+                background: var(--massage-backErr-color) !important;
+            }
+
+            & .Etext {
+                font-size: 20px;
+                margin: 0 !important;
+                font-weight: 500 !important;
+                padding: 0px 5px 1px 5px !important;
+            }
+        }
+    }
+}
